@@ -150,7 +150,7 @@
                     <a class="btn_toolShare"></a>
                     <a class="btn_toolDownload"></a>
                 </div> -->
-                <router-link class="btn_toolRead" :to="{ path:'comic', query: { href: start, chapter_list: reverse_chapter_list, num: 0,reverse: true }}">开始阅读</router-link>
+                <router-link class="btn_toolRead" :to="{ path:'comic', query: { href: start, chapter_list: chapter_list, num: 0, reverse: true }}">开始阅读</router-link>
             </div>
         </section>
     </article>
@@ -197,9 +197,6 @@ export default {
         for (var i = 0; i < data[1].length; i++) {
           that.chapter_list.push(data[1][i].href.toString())
         }
-
-        that.reverse_chapter_list = that.chapter_list.concat()
-        that.reverse_chapter_list.reverse()
         // console.log(that.reverse_chapter_list)
       })
     },

@@ -90,7 +90,9 @@ export default {
           that.prompt = true
           setTimeout(function () { that.prompt = false }, 2000)
         } else {
-          var Lrehref = '/content/' + that.chapter_list[that.num - 1]
+          var ReverseChapterList = that.chapter_list.concat()
+          ReverseChapterList.reverse()
+          var Lrehref = '/content/' + ReverseChapterList[that.num - 1]
           // console.log(that.chapter_list)
           // console.log(that.num)
           // console.log(href)
@@ -132,7 +134,9 @@ export default {
           that.prompt = true
           setTimeout(function () { that.prompt = false }, 2000)
         } else {
-          var Rrehref = '/content/' + that.chapter_list[that.num + 1]
+          var ReverseChapterList = that.chapter_list.concat()
+          ReverseChapterList.reverse()
+          var Rrehref = '/content/' + ReverseChapterList[that.num + 1]
           // console.log(that.chapter_list)
           // console.log(that.num)
           // console.log(href)
